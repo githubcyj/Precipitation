@@ -3,12 +3,22 @@
  */
 
  import React from 'react'
- import { Button } from 'antd';
+ /* browserroute 和 hashroute 的区别是是否加上#*/
+ import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import Login from './pages/login/login';
+import Admin from './pages/admin/admin';
 
 class App extends React.Component{
+
+
     render(){
         return ( 
-            <Button type="primary">Primary</Button>
+            <BrowserRouter>
+                <Switch>/*只匹配其中一个 */
+                    <Route path='/login' component={Login}></Route>
+                    <Route path='/' component={Admin}></Route>
+                </Switch>
+            </BrowserRouter>
         )
     }
 }
