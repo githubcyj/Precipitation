@@ -1,30 +1,39 @@
 import React from 'react'
-import { Form, Icon, Input, Button } from 'antd';
+import { Form, Icon, Input, Button, message } from 'antd';
 
 import './login.less'
-import logo from './images/logo.png'
-import { callbackify } from 'util';
+import logo from '../../assets/images/logo.png'
+import { reqLogin } from '../../api'
+import memoryUtils from '../../utils/memoryUtils';
+import storageUtils from '../../utils/storageUtils';
+import { Redirect } from 'react-router-dom'
 
 const Item = Form.Item;
 
 class Login extends React.Component {
 
     validatePwd = (rule, value, callback) => {
-        console.log('validatePwd', rule, callback);
+        console.log('validatePwd', rule, value);
         if(!value){
             callback('密码必须输入');
-        }else if(value.lenght < 4){
+        }else if(value.length < 4){
             callback('密码长度不能小于4');
-        }else if(value.lenght > 12){
+        }else if(value.length > 12){
             callback('密码长度不能大于12');
-        }else if('/^[a-zA-Z0-9_]+$/'.test(value)){
+        }else if(!/^[a-zA-Z0-9_]+$/.test(value)){
             callback('密码必须是英文，数字，下划线');
         }else{
-            callback('验证通过');
+            callback();
         }
     }
 
     render() {
+        //判断用户是否登录
+        const user = memoryUtils.user
+        if(user && user._id){
+            return <Redirect to='/'/>
+        }
+
         const { getFieldDecorator } = this.props.form;
         return (
             <div className="login">
@@ -46,7 +55,7 @@ class Login extends React.Component {
                                     { required: true, whitespace: true, message: '用户名必填' },
                                     { min: 4, message: '用户名至少4位数' },
                                     { max: 12, message: '用户名最多12位数' },
-                                    { pattern: /^[a-zA-Z0-9_]+$/, message: '用户名必须是英文，数字，下划线' }],
+                                    { pattern: /^[a-zA-Z0-9_]+$/, message: '用户名必须是英文，数字，下划线' }]
                             })(<Input
                                 prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                 placeholder="用户名"
@@ -55,7 +64,7 @@ class Login extends React.Component {
                         </Item>
                         <Item>
                             {getFieldDecorator('password', {
-                                rules: [{ validator: this.validatePwd }],
+                                rules: [{ validator: this.validatePwd }]
                             })(
                                 <Input
                                     prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -82,9 +91,24 @@ class Login extends React.Component {
         // const form = this.props.form;
         // const values = form.getFieldsValue();
 
-        this.props.form.validateFields((err, values) => {
+        this.props.form.validateFields(async (err, values) => {
             if (!err) {
-                console.log('handleSubmit = ()', values);
+                // console.log('handleSubmit = ()', values);
+                const { username, password } = values
+                const result = await reqLogin(username, password)
+                if (result.status === 0 ){
+                    message.success('登录成功')
+                    
+                    //保存user
+                    const user = result.data
+                    memoryUtils.user = user//保存到内存
+                    storageUtils.saveUser(user)//保存到local中
+
+                    //跳转到登录界面(不需要再回退回到登陆)
+                    this.props.history.replace('/')
+                }else{
+                    message.error(result.msg)
+                }
             }else{
                 console.log('校验失败');
             }
