@@ -14,7 +14,7 @@ class App extends React.Component{
     render(){
         return ( 
             <BrowserRouter>
-                <Switch>/*只匹配其中一个 */
+                <Switch>
                     <Route path='/login' component={Login}></Route>
                     <Route path='/' component={Admin}></Route>
                 </Switch>
