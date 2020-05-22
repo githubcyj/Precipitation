@@ -6,8 +6,8 @@ const menuList = [
     },
     {
     title: '日程表', // 菜单标题名称
-    key: '/home', // 对应的path
-    icon: 'home', // 图标名称
+    key: '/calendar', // 对应的path
+    icon: 'calendar', // 图标名称
     },
     {
     title: '商品',
