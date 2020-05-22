@@ -1,6 +1,6 @@
 import React from 'react'
 import FullCalendar from '@fullcalendar/react'
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
+// import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import timeGridPlugin from '@fullcalendar/timegrid'
