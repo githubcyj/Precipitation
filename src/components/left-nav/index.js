@@ -4,7 +4,7 @@ import { Menu, Icon } from 'antd';
 
 import './left-nav.less'
 import logo from '../../assets/images/logo.png'
-import menuList from '../../config/menuConfig'
+import menuList from '../../../config/menuConfig'
 
 const SubMenu = Menu.SubMenu;
 

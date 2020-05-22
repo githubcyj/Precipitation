@@ -5,7 +5,7 @@
  import React from 'react'
  /* browserroute 和 hashroute 的区别是是否加上#*/
  import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import Login from './pages/login/login';
+// import Login from './pages/login/login';
 import Admin from './pages/admin/admin';
 
 class App extends React.Component{
@@ -15,7 +15,7 @@ class App extends React.Component{
         return ( 
             <BrowserRouter>
                 <Switch>
-                    <Route path='/login' component={Login}></Route>
+                    {/* <Route path='/login' component={Login}></Route> */}
                     <Route path='/' component={Admin}></Route>
                 </Switch>
             </BrowserRouter>
