@@ -26,6 +26,19 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
+                test: /\.tsx?$/,
+                use: [
+                    'babel-loader',
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true
+                        }
+                    }
+                ],
+                exclude: /node_modules/,
+            },
+            {
                 // 处理html中img资源
                 test: /\.html$/,
                 loader: 'html-loader'
