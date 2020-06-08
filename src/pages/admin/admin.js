@@ -8,6 +8,7 @@ import Header from '../../components/header/header'
 import Home from '../home'
 import Calendar from '../calendar'
 import DynamicTable from '../dynamicTable'
+import TypescriptDemo from '../typescriptdemo'
 // import Category from '../category'
 // import Product from '../product'
 // import Role from '../role'
@@ -40,6 +41,7 @@ export default class Admin extends React.Component{
                             <Route path='/home' component={Home}/>
                             <Route path='/calendar' component={Calendar}/>
                             <Route path='/dynamic/table' component={DynamicTable}/>
+                            <Route path='/typescriptDemo' component={TypescriptDemo}/>
                             {/* <Route path='/category' component={Category}/>
                             <Route path='/product' component={Product}/>
                             <Route path='/role' component={Role}/>

@@ -62,7 +62,8 @@ export default class Calendar extends React.Component{
             w=7;
         }
         let we1 = date.getDate() + 6;
-        let week = Math.ceil(( we1 - w) / 7);
+        let week = Math.ceil(( we1 - w) / 7) - 1;
+        console.log(week);
         // 当月第一天不是周一
         if (w1!==1) { week = Math.ceil((we1 - w) / 7); }
         let cNum = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
@@ -107,7 +108,7 @@ export default class Calendar extends React.Component{
         } else { d1 = 1; }
         let gs = dd - d1;
         let weekCount = Math.ceil(( gs + 1)/7);
-        console.log(weekCount)
+        // console.log(weekCount)
         return weekCount;
     }
     // getMonthWeeks(a, b, c) {
@@ -187,15 +188,15 @@ export default class Calendar extends React.Component{
     }
     
     componentDidMount() {
-        this.getWeekDay(2020,3,1)
-        this.getWeekDay(2020,4,1)
-        this.getWeekDay(2020,5,1)
-        this.getWeekDay(2020,6,1)
+        // this.getWeekDay(2020,3,1)
+        // this.getWeekDay(2020,4,1)
+        // this.getWeekDay(2020,5,1)
+        // this.getWeekDay(2020,6,1)
         // this.showDate();
-        // this.getMonthWeek(new Date(2020,4,1));
-        // this.getMonthWeek(new Date(2020,2,8));
-        // this.getWeekByDate('2020-3-1');
-        // this.getWeekByDate('2020-3-8');
+        this.getMonthWeek(new Date(2020,2,1));
+        this.getMonthWeek(new Date(2020,2,5));
+        this.getWeekByDate('2020-2-1');
+        this.getWeekByDate('2020-2-5');
         // this.getYearWeek(new Date());
         // this.getWeeks(2020,3)
         // this.getWeeks(2020,4)

@@ -3,7 +3,7 @@ interface Point{
     y: number
 }
 
-function tsDemo(data: Point){
+export default function tsDemo(data: Point){
     console.log('123');
     return Math.sqrt(data.x ** 2 + data.y ** 2);
 }
