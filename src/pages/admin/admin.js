@@ -9,14 +9,6 @@ import Home from '../home'
 import Calendar from '../calendar'
 import DynamicTable from '../dynamicTable'
 import TypescriptDemo from '../typescriptdemo'
-// import Category from '../category'
-// import Product from '../product'
-// import Role from '../role'
-// import User from '../user'
-// import Bar from '../charts/bar'
-// import Line from '../charts/line'
-// import Pie from '../charts/pie'
-
 
 const {  Footer, Sider, Content } = Layout;
 

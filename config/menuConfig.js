@@ -15,6 +15,11 @@ const menuList = [
     icon: 'home', // 图标名称
     },
     {
+    title: 'typescript', // 菜单标题名称
+    key: '/typescriptDemo', // 对应的path
+    icon: 'home', // 图标名称
+    },
+    {
     title: '商品',
     key: '/products',
     icon: 'appstore',

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",// 包含es6/es7/commonjs
+        "target": "es5",// 目标运行环境
+        "allowJs": true// 允许使用js
+    },
+    "include": [
+        "./src/*"
+    ],
+    "exclude": [
+        "./node_modules"
+    ]
+}
