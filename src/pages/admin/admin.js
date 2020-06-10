@@ -9,6 +9,7 @@ import Home from '../home'
 import Calendar from '../calendar'
 import DynamicTable from '../dynamicTable'
 import TypescriptDemo from '../typescriptdemo'
+import UploadFile from '../uploadFile'
 
 const {  Footer, Sider, Content } = Layout;
 
@@ -33,7 +34,8 @@ export default class Admin extends React.Component{
                             <Route path='/home' component={Home}/>
                             <Route path='/calendar' component={Calendar}/>
                             <Route path='/dynamic/table' component={DynamicTable}/>
-                            <Route path='/typescriptDemo' component={TypescriptDemo}/>
+                            {/* <Route path='/typescriptDemo' component={TypescriptDemo}/> */}
+                            <Route path='/upload/file' component={UploadFile}/>
                             {/* <Route path='/category' component={Category}/>
                             <Route path='/product' component={Product}/>
                             <Route path='/role' component={Role}/>
