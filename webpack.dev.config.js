@@ -1,7 +1,9 @@
 const {resolve} = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const smp = new SpeedMeasurePlugin();
 
-module.exports = {
+module.exports = smp.wrap({
     // entry: './webpack-test/js/index.js',
     entry: './src/index.js',
     output: {
@@ -79,10 +81,11 @@ module.exports = {
         open: true,
         hot: true,
         compress: true,
+        historyApiFallback: true
     },
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", ".js", ".json"]
     },
     devtool: 'source-map',
-}
+})

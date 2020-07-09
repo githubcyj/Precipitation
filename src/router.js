@@ -4,7 +4,7 @@
 
 import React from 'react'
 /* browserroute 和 hashroute 的区别是是否加上#*/
-import {BrowserRouter, Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 import Admin from './pages/admin/admin';
 
