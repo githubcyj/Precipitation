@@ -7,7 +7,7 @@ import './header.less'
 // import memoryUtils from '../../utils/memoryUtils'
 // import storageUtils from '../../utils/storageUtils'
 // import {reqWeather} from '../../api'
-import menuList from '../../../config/menuConfig'
+import menuList from '../../config/menuConfig'
 import LinkButton from '../link-button';
 
 
