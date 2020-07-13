@@ -81,7 +81,10 @@ module.exports = smp.wrap({
         open: true,
         hot: true,
         compress: true,
-        historyApiFallback: true
+        // html5路由
+        historyApiFallback: true,
+        // 请求代理
+        // proxy: getProxyConfig(),
     },
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
