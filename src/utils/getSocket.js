@@ -33,7 +33,6 @@ class GetSocket {
                 callback(res);
             }
         });
-        console.log(11111)
 
         // 建立连接
         this.websocket.addEventListener('open', () => {
