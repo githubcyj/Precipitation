@@ -12,7 +12,7 @@ export default class Home extends React.Component{
         return(
             <div className='home'>
                 {/* <Exam/> */}
-                欢迎使用 后台系统,  图表，折线，canvas
+                欢迎使用 后台系统,  图表，折线，canvas,测试
             </div>
         )
     }
