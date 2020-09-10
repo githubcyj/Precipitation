@@ -1,0 +1,10 @@
+@import '../all.css';
+
+.parent{
+    background-color: #eee;
+    height: 100%;
+}
+
+span{
+    display: block;
+}

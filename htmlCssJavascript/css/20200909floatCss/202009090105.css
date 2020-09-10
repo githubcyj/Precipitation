@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 实例2 */
+.green {
+    background: #73DE80;
+    opacity: 0.5;
+    border: 3px solid #F31264;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+  
+.red {
+    background: #EF5BE2;
+    opacity: 0.5;
+    border: 3px solid #F31264;
+    width: 400px;
+    min-height: 100px;
+}
+  
+.gray {
+    background: #888;
+    height: 100%;
+    margin-left: 50px;
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <html lang="zh-CN"></html> -->
+<head>
+	<!-- meta 
+	charset				编码格式				
+	name:keywords		网页的关键词keywords，seo搜索
+	name:description	网页的描述内容
+	name:viewport		视口viewport meta:vp tab(移动端手机页面开发必须加的代码)
+	-->
+	<meta charset="UTF-8">
+	<meta name="keywords" content="meta标签">
+	<title>Document</title>
+	<!-- link 
+	icon 	网页标题前的图标
+	css		引入css文件，外链式
+		行内式： 使用标签的style属性，添加样式		优先级较高
+		内嵌式： 写在head里面title下面的style，type="text/css"
+		外链式： 使用link标签将文件导入到当前这个文件里
+		导入式： 需要依赖css样式文件，所以要放在style和css文件中
+				<style type="text/css"> @import "css文件路径" </style>
+		导入式和内嵌式共同存在时，需要将导入式放在内嵌的前面，不然会报错，导致导入式的样式直接失效
+		外链式的文件样式是跟随页面被加载的时候，就立马加载了；但是内嵌式的样式，是页面所有内容被加载之后，才会被加载
+
+	-->
+	<link rel="stylesheet" href="../css/flexCss.css">
+	<!-- css命名
+		常用命名
+			头部： header
+			内容： content/container
+			尾部： footer
+			导航： nav
+			侧栏： sidebar
+			栏目： column
+			页面外围控制整体布局宽度： wrapper
+			左右中： left	right	center
+			登陆条： loginbar
+			标志： logo
+			广告： banner
+			页面主体： main
+			热点： hot
+			新闻: news
+			下载： download
+			子导航： subnav
+			菜单： menu
+			子菜单： submenu
+			搜索： search
+			友情链接： friendlink
+			版权： copyright
+			投票： vote
+			合作伙伴： partner
+			滚动： scroll
+			标签页：tab
+			文章列表： list
+			提示信息：msg
+			小技巧：tips
+			栏目标题：title
+			加入：jionus
+			指南：guild
+			服务：service
+			注册：register
+			状态：status
+	-->
+	<!-- css选择器
+		基本选择器：
+			通配符*：代表页面上所有标签名，可以用来初始化页面，清除浏览器自带的默认间距
+			标签
+			class
+			id
+			派生：li strong
+			属性：[title='w3school']
+
+		并集选择器：
+			相同的设置的标签可以写在同一个里面
+
+		交集选择器：
+			可以更精准的找到元素，class名或者id名前加上标签名，中间没有空格
+
+		后代选择器：
+			层级最好不要超过3个，中间用空格隔开
+
+		子代选择器：
+			跟后代选择器差不多，区别是，写法上，子代中间间隔用">"隔开
+			且有两个同级父元素，只会影响第一个元素的子元素
+
+		相邻兄弟选择器：
+			两个元素是同一个父元素，两者之间用"+"连接，前者是用于定位，后者是具体需要影响的元素
+
+		属性选择器：
+			*[title]，a[href]，a[href][title]，p[class~="important"] 
+
+		伪类选择器：
+			:active			选定的内容
+			:focus			输入框的焦点
+			:hover			鼠标悬浮
+			:link			未访问的链接
+			:visited		已访问的链接
+			:first-child	第一个子元素
+			:lang			带有lang标签的元素
+
+		css3新增的伪类
+			:not(:last-child)			排除最后一个元素
+			:nth-child(n)  n表示具体第几个 odd/2n+1奇数  even/2n偶数
+			:only-child   仅且只有一个元素
+			:nth-last-child				倒数第几个元素
+			:first-of-type				第一个同级兄弟元素
+			:last-of-type				最后一个同级兄弟元素
+			:only-of-type				只有一个同级兄弟元素
+			:nth-of-type(n)				第n个同级兄弟元素
+			:nth-last-of-type(n)		倒数第n个同级兄弟元素
+			:empty						空内容
+			:checked					被选中
+
+		伪元素选择器：
+			:after						必须要写content:''，不然样式不起作用
+			:before						必须要写content:''，不然样式不起作用
+			:first-line
+			:first-letter
+	-->
+	<!-- 权重
+		权重不同：id > class > 标签 > *
+		权重相同：就近原则
+		权重相同，不遵循就近原则的情况：!important 1000
+	-->
+	<!-- 属性继承
+		
+	-->
+	<!-- 盒子模型
+		单位：
+			px
+			%
+		width
+		height
+		padding
+		border
+		margin
+	-->
+</head>
+<body>
+	<!-- 标签
+	a			链接标签，与link的区别		href,target,
+	audio		音乐播放				autoplay,loop,controls
+
+	button		按钮		
+	br			换行
+	b			加粗
+
+	canvas		画图
+	caption		单元表格标题
+	col
+	colgroup	列组
+
+	div
+	dl dt dd	定义列表
+	datalist
+
+	em			斜体
+
+	form
+	frame
+	footer<html5>
+	figure		图片
+	figcaption	图文组合
+
+	head
+	h1-h6
+	html
+	hr			水平线
+	header<html5>
+	
+	input								type,
+	i			斜体
+	img			图片					src,alt,title,
+
+	ul
+	li
+	label
+	link
+
+	meta
+	mid
+	menu
+	map			定义图像
+	mark		标记文本
+	meter		定义预定义范围内的度量，进度
+
+	nav			定义导航链接
+
+	ol
+	option
+	object
+
+	p
+	progress
+
+	s			中划线
+	span		定义小块，小图标
+	strong		加粗
+	style
+	select
+	small
+	sup
+	sub
+	section		相当于div，用来划分块
+	
+	title
+	table		单元格						th,tr,td,thead,tbody,tfoot
+	textarea
+	
+	ul
+	u			下划线
+
+	video		视频播放器
+	-->
+	<!-- html5 新特性 
+	
+	-->
+	<!-- 元素：
+		开始标签和结束标签中间所有的代码
+	元素 = 标签 + 标签属性 + 元素内容
+	行内元素：
+		不独占一行
+		从左往右
+		设置宽高不起作用，需要转换成块级或者行内块
+		不设置宽高，是它本身内容的宽高
+		本身自带display:inline
+		行内元素不能嵌套块级元素（特殊a)，a标签不要嵌套a标签，即时嵌套了，最后浏览器也会解析为并列关系
+		a,button,big,datalist,em,i,input,mark,span,select,option,strong,s,small,b,sup,sub,textarea,u,
+	块级元素：
+		独占一行
+		从上往下
+		可以设置宽高已经盒子模型的其他属性
+		不设置宽高的情况下，它的宽度是父元素的宽度，它的高度是本身内容的高度
+		本身自带display:block
+		块级可以嵌套行内元素
+		ul ol 下面只能是li   dl下面只能是dt,dd
+		p里不能嵌套任何的块级元素，包括它自己本身，可以嵌套行内元素的
+		table,form,dl,dt,dd,figure,figcaption,div,h1-h6,hr,ul,li,ol,nav,p
+	行内块元素：
+		本身自带display：inline-block
+		img,input,
+	 -->
+	<!-- 标签语义化
+
+	-->
+	 <div class="box">
+		<span class="item">设置项目的对齐方式，就能实现居中对齐和右对齐</span>
+		<span class="item">设置项目的对齐方式，就能实现居中对齐和右对齐</span>
+	</div>
+	<button click="buttonClick">测试按钮</button>
+</body>
+<!-- <script src="${staticcdnurl}/page/manage/js/main.js?${version}"></script> -->
+
+<script defer> 
+	alert("defer");
+  </script> 
+  <script> 
+	alert("script"); 
+  </script> 
+  <script type="text/javascript"> 
+	window.onload = function(){ 
+	  alert("load"); 
+	}; 
+	function buttonClick(){
+		alert("button");
+	}
+  </script>
+</html>

@@ -1,0 +1,18 @@
+@import '../all.css';
+  
+  div{
+    position:relative;
+    width:100%;
+    height:100%;
+    background-color: pink;
+  }
+  
+  /* position定位 */
+  .title{
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    /* translate以百分比，表示以自身元素的百分比的像素移动 */
+    transform: translate(-50%,-50%); 
+  }

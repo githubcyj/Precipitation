@@ -1,0 +1,47 @@
+.HalfPixelLine{
+    /* background: repeat-x top left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='black' x='0' y='0' width='1' height='0.5'/></svg>"); */
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzFweCc+PGxpbmUgeDE9JzAnIHkxPScwJyB4Mj0nMTAwJScgeTI9JzAnIHN0cm9rZT0nIzAwMCc+PC9saW5lPjwvc3ZnPg==");
+    height: 1px;
+    width: 100%;
+  }
+
+  .hr {
+    width: 300px;
+    background-color: #000;
+ }
+ .hr.half-px {
+    height: 0.5px;
+ }
+
+ .hr.one-px {
+    height: 1px;
+  }
+
+  .hr.scale-half {
+    height: 1px;
+    transform: scaleY(0.5);
+  }
+
+  .hr.gradient {
+    height: 1px;
+    background: linear-gradient(0deg, #fff, #000);
+  }
+
+  .hr.boxshadow {
+    height: 1px;
+    background: none;
+    box-shadow: 0 0.5px 0 #000;
+  }
+
+  .parent{
+    position: relative;
+    background-color: red;
+    width: 100px;
+    height: 200px;
+  }
+
+  .child{
+    position: absolute;
+    background-color: blue;
+    left: 50%;
+  }

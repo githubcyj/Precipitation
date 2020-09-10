@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.parentBox{
+    /* display: block;
+    position: relative;
+    height: 200px; */
+    color: white;
+    /* background-image: url('../imgs/test.png');
+    background-repeat: no-repeat; */
+}
+.boxSix{
+    clear: left;
+}
+
+.parentBox > div {
+    float: left;
+}
+
+.childrenBox-one{
+    height: 40px;
+    background-color: brown;
+}
+.childrenBox-two{
+    background-color: blue;
+    color: red;
+}
+.childrenBox-three{
+    background-color: green;
+}
+
+.boxFourth{
+    /* clear: both; */
+    clear: left;
+}
+

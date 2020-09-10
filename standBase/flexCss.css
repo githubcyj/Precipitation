@@ -1,0 +1,65 @@
+/**
+盒子模型
+    单位：
+        px
+        %
+    width
+    height
+    padding
+    border
+    margin
+        外边距重叠的问题：取最大值，谁大听谁的
+        内嵌盒子的margin问题：给小盒子加margin-top，不会实现两个盒子分离的情况，会转移到大盒子上，导致整体往下移。
+            解决方案：第一种，float:left;第二种：大盒子上加overflow：hidden；
+                     第三种：padding-top:1px，需要在height上减掉padding的高度，不然会影响整体的高度
+                     第四种：border-top：1px，同上一个
+
+标签
+    标签元素
+    选择器
+    样式
+        块级，行类，行内块 display
+        颜色：背景颜色，字体颜色
+        左右边距
+        边框
+        位置定位 position
+        层级
+
+动画
+*/
+
+
+/* .box {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-end; */
+    /* align-items: center;
+} */
+
+/* .box {
+    height: 500px;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+/* 双项目布局 */
+/* .box {
+    height: 500px;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+  } */
+
+  .box {
+    height: 500px;
+    width: 100%;
+    display: flex;
+  }
+  
+  .item:nth-child(2) {
+    align-self: center;
+  }

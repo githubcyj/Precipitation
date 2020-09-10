@@ -1,0 +1,11 @@
+@import '../all.css';
+
+/* 多个元素居中对齐 */
+.contact{
+    display: table;
+}
+  
+.table{
+    display:table-cell;
+    vertical-align: middle;
+}

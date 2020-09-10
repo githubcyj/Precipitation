@@ -1,0 +1,147 @@
+<!-- 高度塌陷的例子 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 布局</title>
+    <!-- <link rel="stylesheet" href="../css/20200909floatCss/202009090001.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200909floatCss/202009090101.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200909floatCss/202009090102.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200909floatCss/202009090103.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200909floatCss/202009090104.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200909floatCss/202009090105.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200909floatCss/202009090201.css"> -->
+    <link rel="stylesheet" href="../css/20200909floatCss/202009090301.css">
+</head>
+<body>
+    <!-- <div class="parentBox">
+        <div class="childrenBox-one">
+            第一个盒子
+        </div>
+        <div class="childrenBox-two">
+            第二个盒子  ————
+            <span>行内元素同级测试</span>
+        </div>
+        <div class="childrenBox-three boxSix">
+            第六个盒子
+        </div>
+        <div class="childrenBox-three">
+            第三个盒子
+            <div>块状同级测试</div>
+        </div>
+    </div>
+    <div class="childrenBox-three boxFourth">
+        第四个盒子
+    </div>
+    <span class="childrenBox-three">
+        第五个盒子
+    </span> -->
+
+    <!-- BFC: block format context, 块级格式化上下文，当元素被定义为块格式上下文的话，自身就形成了一个独立的盒子，让处于BFC内部的元素与外部的元素相互隔离 -->
+
+    <!-- 形成的条件：
+        float属性不为none.
+        position属性不为static和relative.
+        display属性为下列之一:table-cell,table-caption,inline-block, flex,inline-flex.
+        overflow属性不为visible.
+        弹性盒子. -->
+
+    <!-- 布局规则：
+        1. 同一个BFC内部的Box在垂直方向，一个接一个地排列；
+        2. Box垂直方向的间距由margin值决定，属于同一个BFC内的两个相邻Box的margin值会发生重叠，重叠的结果：间距为较宽的margin值；
+        3. BFC内部每个Box的左边margin与其包含块的左边border相接处（对于从左往右的格式化，否则相反），即使浮动也是如此；
+        4. 包含块内部子元素的每个BFC不会重叠，如果设置float属性，会在水平依次排开
+        5. BFC是页面上一个隔离的独立容器，容器里面的子元素不会影响到外面的元素（反之，亦反）；
+        6. 计算BFC的高度时，其内的浮动元素也参与； -->
+
+    <!-- 作用：
+        1. 自适应两栏布局
+        2. 清除内部浮动
+        3. 防止垂直 margin 重叠
+        4．子元素添加margin-top，父元素会一起掉下来 -->
+    
+
+
+    <!-- 两栏布局 -->
+    <!-- 解决方案：
+        1. 规则3：.main增加overflow:hidden
+        2. 规则4：.main设置float:left，有内容则显示，无内容则不显示，或者添加固定的宽度 -->
+    <!-- <div class="aside"></div>
+    <div class="main"></div> -->
+
+    <!-- 清除内部浮动 -->
+    <!-- 规则6：把par也变成一个BFC，添加overflow:hidden -->
+    <!-- <div class="par">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div> -->
+
+    <!-- 防止垂直 margin 重叠 -->
+    <!-- 规则2：给p标签包一层BFC，即overflow: hidden 或者 div2添加position:absolute -->
+    <!-- <div class="container">
+        <p>条目 1</p>
+        <p>条目 2</p>
+        <div class="newBFC">
+            <p>条目 3</p>
+        </div>
+    </div> -->
+    
+    <!-- 子元素添加margin-top，父元素会一起掉下来 -->
+    <!-- 规则5：divAll变成一个BFC，即添加border: 1px solid black;或者overflow: hidden;或者position: absolute;或者display: inline-block;或者float: left;根据实际情况而定 -->
+    <!-- <div class="divAll">
+        <div class="div1">Haha</div>
+    </div> -->
+    
+
+    <!-- 综合实例2 -->
+    <!-- 规则6：gray变成一个BFC，灰色自然包含绿色 -->
+    <!-- 规则3：red变成一个BFC，红色自然在绿色右侧排列 -->
+    <!-- <div class='gray'>
+        <div class='green'></div>
+        <div class='red'></div>
+    </div> -->
+
+
+    <!-- padding + 浮动  ——>  圣杯布局 -->
+    <!-- <div class="header">
+        <h4>header</h4>
+    </div>
+    <div class="container">
+        <div class="middle">
+            <h4>middle</h4>   
+        </div>
+        <div class="left">
+            <h4>left</h4>  
+        </div>
+        <div class="right">
+            <h4>right</h4>
+        </div>
+    </div>
+    <div class="footer">
+        <h4>footer</h4>
+    </div> -->
+
+
+    <!-- margin + 浮动  ——>  双飞翼布局 -->
+    <div class="header">
+        <h4>header</h4>
+    </div>
+    <div class="main">
+        <div class="main-inner">
+            <h4>main</h4>
+        </div>
+    </div>
+    <div class="left">
+        <h4>left</h4>
+    </div>
+
+    <div class="right">
+        <h4>right</h4>
+    </div>
+    <div class="footer">
+        <h4>footer</h4>
+    </div>
+          
+</body>
+</html>
+

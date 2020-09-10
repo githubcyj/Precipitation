@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+	width: 300px;
+  background-color: black;
+  overflow: hidden;
+}
+
+p {
+  background-color: white;
+  margin: 10px 0;
+  text-align: center;
+}
+.newBFC {
+  overflow: hidden;
+}

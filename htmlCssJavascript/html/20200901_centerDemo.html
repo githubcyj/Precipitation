@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- <link rel="stylesheet" href="../css/20200901centerCss/202009010001.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200901centerCss/202009010101.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200901centerCss/202009010102.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200901centerCss/202009010103.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200901centerCss/202009010104.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200901centerCss/202009010201.css"> -->
+    <!-- <link rel="stylesheet" href="../css/20200901centerCss/202009010301.css"> -->
+</head>
+<body>
+    <!-- 脱离文档流，也就是将元素从普通的布局排版中拿走，其他盒子在定位的时候，会当做脱离文档流的元素不存在而进行定位。
+    需要注意的是，使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在周围。
+    而对于使用absolute positioning脱离文档流的元素，其他盒子与其他盒子内的文本都会无视它。 -->
+
+    <!-- 父容器与子元素的宽高都不确定的情况 -->
+  <!-- <div class="head">
+    <h1 class="h-title">Welcome To Our Studio!</h1>
+  </div> -->
+
+  <!-- 模态框 -->
+ <!-- 以body为父元素，则html和body的宽高都必须为100%，不然直接以body为父元素的话，由于绝对定位脱离文档流，所以下一行的html会直接显示在页面顶部
+ 以div为父元素，比较好区分应用 -->
+  <div>
+    <h1 class="title">Welcome To Our Studio!</h1>
+  </div>
+
+  <!-- 小元素居中 -->
+  <!-- line-height，text-align:center -->
+  <!-- <button>button</button> -->
+
+  <!-- 多个元素居中对齐 -->
+  <!-- <div class="contact">
+    <div class="table">
+       <img src="https://tva2.sinaimg.cn/crop.0.0.349.349.180/624f9882jw1eauqmjnvloj209q09qaab.jpg" alt="">
+    </div>
+   <div class="table">
+      <p> 如今，前端工程师在写页面的时候运用的css垂直水平居中的方法有很多，那么我们应该在什么样的场景下用什么css垂直水平居中方法更为合适呢？</p>
+   </div>
+  </div> -->
+
+</body>
+</html>

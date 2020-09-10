@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>javascript</title>
+            <style>
+              #app ul li {
+                background-color: red;
+              }
+              .right ul li{
+                background-color: blue;
+              }
+            </style>
+    </head>
+
+    
+    <body>
+            
+        <div id="app" style="width: 100vw; background: white;">
+            <span id="btn">点我</span>
+            <div class="right">
+              <ul>
+                <li>hello</li>
+                <li>hello</li>
+                <li>hello</li>
+              </ul>
+            </div>
+            <ul>
+              <li>everyone</li>
+              <li>everyone</li>
+              <li>everyone</li>
+            </ul>
+          </div>
+          <!-- <script src="../js/app.js"></script> -->
+          <!-- <script >
+                // 事件捕获：先输出 "外层click事件触发"; 再输出 "内层click事件触发"
+                var useCapture = true;
+                var btn = document.getElementById("btn");
+                btn.addEventListener(
+                  "click",
+                  function(e) {
+                    event.stopImmediatePropagation(); 
+                    alert("内层click事件触发");
+                  },
+                  useCapture
+                );
+              
+                var app = document.getElementById("app");
+                app.onclick = function() {
+                    alert("外层click事件触发");
+                };
+              </script> -->
+    </body>
+</html>

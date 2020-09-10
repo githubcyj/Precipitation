@@ -1,0 +1,17 @@
+@import '../all.css';
+
+.box {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 500px;
+    width: 500px;
+    background-color: green;
+}
+.content {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    line-height: 200px;
+    text-align: center;
+}

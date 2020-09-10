@@ -1,0 +1,11 @@
+/* 不需要兼容IE或者是手机界面，flex 父元素设置*/
+@import '../all.css';
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+  }

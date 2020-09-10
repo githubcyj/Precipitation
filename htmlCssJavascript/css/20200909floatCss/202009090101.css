@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.aside {
+    width: 100px;
+    height: 150px;
+    float: left;
+    background: #f66;
+}
+.main {
+    height: 200px;
+    background: #fcc;                                                                                                               
+}

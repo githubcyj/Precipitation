@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/20200907hidElementCss/202009070001.css">
+</head>
+<body>
+    <!-- 隐藏元素的方法 -->
+
+    <div class="parent">
+        <!-- opacity:0 dom节点还在，画面透明不可见 -->
+        <span class="span1">隐藏元素1</span>
+        <!-- z-index: -999; position: absolute; 利用页面元素层级关系，覆盖不可见 -->
+        <span class="span2">隐藏元素2</span>
+        <!-- visibility:hidden  -->
+        <span class="span3">隐藏元素3</span>
+        <!-- margin-left: -100% -->
+        <span class="span4">隐藏元素4</span>
+        <!-- transform: scale(0) -->
+        <span class="span5">隐藏元素5</span>
+        <!-- dispaly:none 页面上去掉此dom节点 -->
+        <span class="span6">隐藏元素6</span>
+        <!-- width: 0; height: 0; overflow: hidden; -->
+        <span class="span7">隐藏元素7</span>
+
+        <span class="span8">隐藏元素8</span>
+
+    </div>
+</body>
+</html>
