@@ -1,0 +1,11 @@
+.table{
+    display: table
+}
+.left{
+    display: table-cell;
+    background-color: red;
+}
+.right{
+    display: table-cell;
+    background-color: green;
+}

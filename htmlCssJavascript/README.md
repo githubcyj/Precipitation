@@ -28,7 +28,7 @@
 
 ### table
 
-### css新特性
+### css3新特性
 
 ### animation（css3和js实现的区别）
 
