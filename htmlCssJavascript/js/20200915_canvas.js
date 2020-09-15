@@ -1,6 +1,6 @@
-var canvas = document.getElementById("canvas");
+let canvas = document.getElementById("canvas");
 // 创建一个绘制环境
-var draw = canvas.getContext("2d");
+let draw = canvas.getContext("2d");
 
 // 设置填充颜色
 // draw.fillStyle = "green";
@@ -17,12 +17,18 @@ for(let a = 2; a< 3; a++){
     draw.fillRect(a,a,a,a);
 }
 
-// 矩形demo练习
-// 绘制一个矩形
-// draw.fillRect(x,y, w,h)
-// x,y是矩形的坐标
+
+
+
+// // 矩形demo练习
+// // 绘制一个矩形
+// // 获取dom元素
+// let canvas = document.getElementById("canvas");
+// // 创建一个绘制环境
+// let draw = canvas.getContext("2d");
+// // draw.fillRect(x,y, w,h)
+// // x,y是矩形的坐标
 // // w,h是矩形的宽高
 // draw.fillRect(0,0, 100,100);
-
 // // 清除一个矩形范围
 // draw.clearRect(10,10, 50,50);

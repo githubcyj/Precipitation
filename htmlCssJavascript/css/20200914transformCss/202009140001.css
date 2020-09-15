@@ -78,12 +78,12 @@
     animation: rotate 60s infinite linear;
 } */
   
-.minutes-container {
+/* .minutes-container {
     animation: rotate 3600s infinite steps(60);
 }
 .seconds-container {
     animation: rotate 60s infinite steps(60);
-}
+} */
   
 
 .minutes-container {
