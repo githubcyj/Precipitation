@@ -249,7 +249,7 @@ Promise.prototype = {
 //     Promise.resolve()
 //       .then(() => {
 //         console.log("then1-1");
-//         return Promise.resolve();
+//         return Promise.resolve(); // 宏任务
 //       })
 //       .then(() => {
 //         console.log("then1-2");
