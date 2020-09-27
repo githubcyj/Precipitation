@@ -270,5 +270,5 @@
 ## react router
 
 - react-router-dom
-
--
+  - 基本构建：BrowserRouter、Switch、Route、Link
+  - 动态路由：正则匹配
