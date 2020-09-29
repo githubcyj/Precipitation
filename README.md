@@ -270,5 +270,15 @@
 ## react router
 
 - react-router-dom
-  - 基本构建：BrowserRouter、Switch、Route、Link
+  - 基本构建：
+    - 使用react-router-dom中的BrowserRouter、Switch、Route、Link
+    - history函数库中的createBrowserHistory 或者 createHashHistory
+    createBrowserHistory & redux: export default createBrowserHistory();
+    createHashHistory & mobx: （mobx-react-router中的syncHistoryWithStore、RouterStore， this.props.routerStore = new RouterStore()）
+        // mobx的history和store连接
+        const browserHistory = useRouterHistory(createHashHistory)({
+        queryKey: '_key',
+        basename: '/'
+        });
+        const history = syncHistoryWithStore(browserHistory, this.props.routerStore);
   - 动态路由：正则匹配
