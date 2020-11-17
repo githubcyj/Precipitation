@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       create-react-app
-      <p>hot reload</p>
+      <p>hot reload1</p>
       {/* <Test/> */}
     </div>
   );
