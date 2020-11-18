@@ -162,45 +162,55 @@ module.exports = {
             //     ],
             //     include: [path.resolve(__dirname, 'src/components'), path.resolve(__dirname, 'src/pages')]
             // },
+            // {
+            //     test: REGEXP_CSS_LESS,
+            //     include: [path.resolve(__dirname, 'src')],
+            //     use: [
+            //         {
+            //             loader: 'style-loader'
+            //             // options: { sourceMap }
+            //         },
+            //         {
+            //             loader: 'css-loader',
+            //             options: {
+            //                 // sourceMap,
+            //                 // modules,
+            //                 // 生产环境使用短类名，开发环境使用详细类名
+            //                 url: true,
+            //                 import: true,
+            //                 esModule: true,
+            //                 modules: {
+            //                     compileType: 'module',
+            //                 mode: 'local',
+            //                 auto: true,
+            //                 exportGlobals: true,
+            //                 localIdentName: '[path][name]__[local]--[hash:base64:5]',
+            //                 localIdentContext: path.resolve(__dirname, 'src'),
+            //                 localIdentHashPrefix: 'my-custom-hash',
+            //                 namedExport: true,
+            //                 exportLocalsConvention: 'camelCase',
+            //                 exportOnlyLocals: false,
+            //                 }
+            //             }
+            //         },
+            //         {
+            //             loader: 'less-loader',
+            //             options: {
+            //                 webpackImporter: false,
+            //                 lessOptions: {
+            //                     javascriptEnabled: true
+            //                 }
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: REGEXP_CSS_LESS,
-                include: [path.resolve(__dirname, 'src')],
-                use: [
-                    {
-                        loader: 'style-loader'
-                        // options: { sourceMap }
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            // sourceMap,
-                            // modules,
-                            // 生产环境使用短类名，开发环境使用详细类名
-                            import: true,
-                            esModule: true,
-                            modules: {
-                                auto: true,
-                                localIdentName: '[path][name]__[local]--[hash:base64:5]'
-                            }
-                        }
-                    },
-                    {
-                        loader: 'less-loader'
-                        // options: {
-                        // javascriptEnabled: true
-                        // modifyVars,
-                        // sourceMap
-                        // }
-                    }
-                ]
-            },
-            {
-                test: REGEXP_CSS_LESS,
-                include: [
-                    path.resolve(__dirname, 'node_modules/antd/lib'),
-                    path.resolve(__dirname, 'node_modules/ant-design-pro'),
-                    path.resolve(__dirname, 'node_modules/react-draft-wysiwyg')
-                ],
+                // include: [
+                //     path.resolve(__dirname, 'node_modules/antd/lib'),
+                //     path.resolve(__dirname, 'node_modules/ant-design-pro'),
+                //     path.resolve(__dirname, 'node_modules/react-draft-wysiwyg')
+                // ],
                 use: [
                     {
                         loader: 'style-loader'
@@ -214,23 +224,31 @@ module.exports = {
                             // 生产环境使用短类名，开发环境使用详细类名
                             modules: {
                                 auto: false,
-                                localIdentName: '[path][name]__[local]--[hash:base64:5]'
                             }
                         }
                     },
                     {
                         loader: 'less-loader',
                         options: {
-                            webpackImporter: false
+                            webpackImporter: false,
+                            lessOptions: {
+                                modifyvars: {
+                                    'font-size-base': '13px',
+                                    // "primary-color": "#4cc0c1",
+                                    'table-padding-vertical': '6px',
+                                    'table-padding-horizontal': '6px'
+                                },
+                                javascriptEnabled: true
+                            }
                         }
                     }
                 ]
             },
-            // {
-            //     test: REGEXP_FILE,
-            //     include: path.resolve(__dirname, 'src/assets'),
-            //     use: ['file-loader']
-            // }
+            {
+                test: REGEXP_FILE,
+                include: path.resolve(__dirname, 'src/assets'),
+                use: ['file-loader']
+            }
         ]
     },
     // resolve: ALIAS
