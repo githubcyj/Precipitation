@@ -13,6 +13,7 @@ function App() {
           <Form.Item label="test">test</Form.Item>
       </Form>
           <Button type="primary">确定</Button>
+      <p>hot reload1</p>
       {/* <Test/> */}
     </div>
   );
