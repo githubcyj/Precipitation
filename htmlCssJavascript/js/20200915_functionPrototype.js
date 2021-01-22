@@ -360,38 +360,38 @@ console.log(instance1.constructor === subClass);
 
 
 // // 寄生继承
-// let book = {
-//     name: 'js book',
-//     alikeBook: ['JavaScript', 'html', 'css']
-// }
-// let createBook = function(obj){
-//     //通过原型继承方式创建新对象
-//     var o = new inheritObject(obj)
-//     //拓展新对象
-//     o.getName = function(){
-//         console.log(o.name)
-//     }
-//     return o
-// }
+let book = {
+    name: 'js book',
+    alikeBook: ['JavaScript', 'html', 'css']
+}
+let createBook = function(obj){
+    //通过原型继承方式创建新对象
+    var o = new inheritObject(obj)
+    //拓展新对象
+    o.getName = function(){
+        console.log(o.name)
+    }
+    return o
+}
 
-// let supClass = {
-//     name : "js book",
-//     alikeBook: ["css book", "html book"]
-// }
+let supClass = {
+    name : "js book",
+    alikeBook: ["css book", "html book"]
+}
 
-// let subClass1 = createBook(supClass);
-// subClass1.name = "ajax book";
-// subClass1.alikeBook.push("xml book");
+let subClass1 = createBook(supClass);
+subClass1.name = "ajax book";
+subClass1.alikeBook.push("xml book");
 
-// let subClass2 = createBook(supClass);
-// subClass2.name = "flash book";
-// subClass2.alikeBook.push("as book");
-// console.log(subClass1.name);
-// console.log(subClass1.alikeBook);
-// subClass1.getName()
-// console.log(subClass2.name);
-// console.log(subClass2.alikeBook);
-// subClass2.getName()
+let subClass2 = createBook(supClass);
+subClass2.name = "flash book";
+subClass2.alikeBook.push("as book");
+console.log(subClass1.name);
+console.log(subClass1.alikeBook);
+subClass1.getName()
+console.log(subClass2.name);
+console.log(subClass2.alikeBook);
+subClass2.getName()
 
 // 组合继承
 // let supClass = function(name){
@@ -491,7 +491,10 @@ console.log(instance1.constructor === subClass);
 // funcA();
 
 
-//new
+// new创建的过程
+// 新建一个内部对象{}
+// 给这个对象指定一个原型链，对象的__proto__指向构造函数的prototype
+// 返回这个内部对象
 // function create(fun){
 //     return function () {
 //         // 创建一个新对象且将其隐式原型指向构造函数原型

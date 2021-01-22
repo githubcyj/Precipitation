@@ -1,7 +1,0 @@
-class shop {
-
-}
-
-class app {
-    
-}
